@@ -27,6 +27,8 @@ npm start
 
 This command will compile the TypeScript and JSX, and serve your application on a local web server. Visit `http://localhost:5051` to view your application.
 
+Make sure to visit [USAGE.md](USAGE.md) before you start coding, it contains brief information about a common pitfall when rendering components.
+
 ## Routing Configuration
 
 This template uses Mithril.js's routing capabilities. If you wish to use hash-based routing, you can set the route prefix by adding the following line before calling `m.mount(...)` in `src/main.ts`:

@@ -37,7 +37,7 @@ export class App implements ClassComponent {
                 className={classes.container + " " + classes[themeModel.theme]}
             >
                 <header className={classes.header}>
-                    <h1>Mithril TSX Template </h1>
+                    <h1>Mithril TSX Template</h1>
                     <span
                         role="button"
                         onclick={function () {
