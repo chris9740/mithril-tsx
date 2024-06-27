@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 const CopyPlugin = require("copy-webpack-plugin");
 const SyntaxJsxPlugin = require("@babel/plugin-syntax-jsx");
 
@@ -11,7 +12,7 @@ module.exports = {
                 loader: "file-loader",
                 options: {
                     name: "assets/[name].[ext]",
-                }
+                },
             },
             {
                 test: /\.(ts|tsx)$/,
@@ -27,9 +28,10 @@ module.exports = {
                         loader: "css-loader",
                         options: {
                             modules: {
-                                localIdentName: "[name]__[local]___[hash:base64:5]",
+                                localIdentName:
+                                    "[name]__[local]___[hash:base64:5]",
                             },
-                        }
+                        },
                     },
                     // Compiles Sass to CSS
                     {
@@ -38,7 +40,7 @@ module.exports = {
                             implementation: require("sass"),
                         },
                     },
-                ]
+                ],
             },
         ],
     },
@@ -51,10 +53,10 @@ module.exports = {
     },
     plugins: [
         new CopyPlugin({
-            patterns: [
-                { from: "public" }
-            ]
+            patterns: [{ from: "public" }],
         }),
-        // SyntaxJsxPlugin,
-    ]
+        new webpack.ProvidePlugin({
+            m: "mithril",
+        }),
+    ],
 };
