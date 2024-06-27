@@ -13,7 +13,7 @@ When you want to render a component with this syntax: `<Example name="World" />`
 ```typescript
 import m, { ClassComponent, Component } from "mithril";
 
-export default class Example implements ClassComponent {
+export class Example implements ClassComponent {
     view(vnode: m.Vnode<{ name: string }, this>): void | m.Children {
         return <div>Hello, {vnode.attrs.name}</div>;
     }
