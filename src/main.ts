@@ -12,3 +12,9 @@ m.route(mountPoint, "/", {
         },
     },
 });
+
+if (module.hot) {
+    module.hot.accept("./App", () => {
+        m.route.set(m.route.get());
+    });
+}

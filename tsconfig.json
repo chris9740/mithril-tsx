@@ -8,7 +8,9 @@
         "allowSyntheticDefaultImports": true,
         "sourceMap": true,
         "plugins": [{ "name": "typescript-plugin-css-modules" }],
-        "jsx": "preserve"
+        "jsx": "preserve",
+        "typeRoots": ["./node_modules/@types", "./src/types"],
+        "types": ["node"],
     },
     "include": ["./src/**/*"]
 }

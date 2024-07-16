@@ -1,4 +1,4 @@
-import m, { Children, ClassComponent } from "mithril";
+import { Children, ClassComponent } from "mithril";
 import { Header } from "./components/Header";
 import classes from "./App.css";
 import { themeModel } from "./api/models/theme";
